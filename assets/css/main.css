@@ -1,3 +1,4 @@
+/* TODO удалить на проде */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 
 :root {
@@ -109,12 +110,23 @@ img, svg {
 }
 
 .header-nav-link i {
+    display: inline-block;
     margin-left: 3px;
+    color: var(--blue);
+    transition: all .2s ease;
+}
+
+.header-nav-item.active .header-nav-link {
+    color: var(--blue);
 }
 
 .header-btns {
     display: flex;
     grid-column-gap: 24px;
+}
+
+.header-btn i {
+    color: var(--text-color);
 }
 
 .header-btn {
@@ -177,10 +189,6 @@ img, svg {
 
 .home-slider-slide > * {
     position: relative;
-}
-
-.header {
-    margin-bottom: var(--header-margin-bottom);
 }
 
 .slider-card {
@@ -260,6 +268,10 @@ img, svg {
     right: 24px;
 }
 
+.home-nav-item i {
+    color: var(--blue);
+}
+
 .home-slider-pagination {
     position: absolute;
     bottom: 0 !important;
@@ -281,6 +293,11 @@ img, svg {
 
 .home-slider-block {
     margin-bottom: 35px;
+    margin-top: 30px;
+}
+
+.header-page {
+    margin-bottom: var(--header-margin-bottom);
 }
 
 .header-page h2 {
@@ -684,6 +701,10 @@ img, svg {
     cursor: pointer;
 }
 
+.product-action-btn i {
+    color: var(--text-color);
+}
+
 .btn-share {
     font-size: 22px;
 }
@@ -849,7 +870,6 @@ img, svg {
 }
 
 .breadcrumbz {
-    margin-top: calc(var(--header-margin-bottom) * -1);
     padding: 15px 0;
     border-bottom: 1px solid var(--brown);
 }
@@ -1075,6 +1095,10 @@ img, svg {
     font-size: 84%;
 }
 
+.sider-head-filter i {
+    color: var(--blue);
+}
+
 .catalog-main-head {
     display: flex;
     justify-content: space-between;
@@ -1174,4 +1198,148 @@ img, svg {
 
 .accord-item {
     border-bottom: 1px solid var(--brown);
+}
+
+.header-drop {
+    position: relative;
+    display: none;
+}
+
+.header-drop-inner {
+    padding: 30px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--accent);
+    z-index: 4;
+    border-bottom: 1px solid var(--brown);
+}
+
+.header-drop-block {
+    border: 1px solid var(--brown);
+    padding: 20px 0 20px 20px;
+    display: flex;
+}
+
+.header-drop-content {
+    flex: 1;
+}
+
+.header-drop-nav {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.header-drop-nav:last-child {
+    margin-bottom: 0;
+}
+
+.header-nav-type {
+    text-transform: uppercase;
+    font-family: var(--optima);
+    font-weight: 400;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    grid-column-gap: 10px;
+    cursor: pointer;
+}
+
+.header-nav-type.active {
+    color: var(--blue);
+}
+
+.header-nav-type i {
+    font-size: 10px;
+}
+
+.header-drop-side {
+    flex: 0 0 320px;
+    max-width: 320px;
+}
+
+.header-drop-content {
+    flex: 0 0 calc(100% - 320px);
+    max-width: calc(100% - 320px);
+    height: 400px;
+}
+
+.header-nav-list {
+    display: none;
+    margin: 0;
+    padding: 0 0 0 21px;
+    list-style-type: none;
+}
+
+.header-nav-href {
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+    grid-column-gap: 10px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.header-nav-href:hover {
+    color: var(--blue);
+}
+
+.header-nav-href::after {
+    content: "\e913";
+    font-family: "icomoon";
+    font-size: 12px;
+    color: var(--blue);
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+}
+
+.header-slider {
+    height: 100%;
+}
+
+.header-category {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.header-category:hover {
+    color: var(--blue);
+}
+
+.header-category-photo {
+    padding: 170px 0;
+    background-color: var(--accent-white);
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 150px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--blue-light);
+}
+
+.header-slider-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 85px;
+    /* background-color: rgba(232, 224, 213, .4); */
+    z-index: 2;
+}
+
+.open_catalog.active i {
+    transform: rotate(135deg);
 }
