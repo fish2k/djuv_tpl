@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/fonts/danilov-icons/style.css">
+    <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <!-- header -->
+    <div id="header"></div>
+
+    <!-- content -->
+    <div id="content">
+        <div class="cabinet-content">
+            <div class="container">
+                <div class="cabinet-header">
+                    <div>
+                        <h1>Мой кабинет</h1>
+                    </div>
+    
+                    <div>
+                        <a href="">продолжить покупки</a>
+                    </div>
+                </div>
+    
+                <div class="cabinet-accordion">
+                    <div class="accordion-item cabinet-accordion-item active">
+                        <div class="accordion-head">
+                            <div>
+                                <h2 class="accordion-title">Личные данные</h2>
+                            </div>
+                            <div>
+                                <i class="accordion-plus icon-plus"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <div class="user-info">
+                                    <table class="table-user">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    Наименование организации
+                                                </td>
+                                                <td>
+                                                    ООО “Ромашка”
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    ИНН
+                                                </td>
+                                                <td>
+                                                    1234567890
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>ОГРН</td>
+                                                <td>1234567890123</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Юридический адрес
+                                                </td>
+                                                <td>
+                                                    654321, Москва, Кремль
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Фактический адрес
+                                                </td>
+                                                <td>
+                                                    123456, Новосибирская область, г. Бердск, Территория, изъятая из земель подсобного хозяйства Всесоюзного центрального совета профессиональных союзов, для организации крестьянского хозяйства, дом 17
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    E-mail
+                                                </td>
+                                                <td>
+                                                    mikhailov@gmail.com
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Телефон
+                                                </td>
+                                                <td>
+                                                    +7 (999) 000-00-00
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Пароль
+                                                </td>
+                                                <td>
+                                                    *********
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <span class="user-edit user-edit-toggle">Редактировать</span>
+                                </div>
+                                <div class="user-info-form" style="display: none;">
+                                    <form id="user_edit_form" novalidate>
+                                        <div class="user-form-row row"> 
+                                            <div class="col-md-12">
+                                                <div class="input-field required mb-3">
+                                                    <input type="text" class="input-field-element" placeholder="Наименование организации" value="ООО “Ромашка”">
+                                                    <div class="input-field-label">
+                                                        <span>Наименование организации</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-field required mb-3">
+                                                    <input type="text" class="input-field-element" placeholder="ИНН" value="1234567890">
+                                                    <div class="input-field-label">
+                                                        <span>ИНН</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-field required mb-3">
+                                                    <input type="text" class="input-field-element" placeholder="ОГРН" value="1234567890123">
+                                                    <div class="input-field-label">
+                                                        <span>ОГРН</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="input-field required mb-3">
+                                                    <input type="text" class="input-field-element" placeholder="Юридический адрес" value="654321, Москва, Кремль">
+                                                    <div class="input-field-label">
+                                                        <span>Юридический адрес</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="input-field contacts-textarea required mb-3">
+                                                    <textarea
+                                                            name="feedback_message"
+                                                            id="feedback_message"
+                                                            class="input-field-element"
+                                                            placeholder="Фактический адрес"
+                                                    >123456, Новосибирская область, г. Бердск, Территория, изъятая из земель подсобного хозяйства Всесоюзного центрального совета профессиональных союзов, для организации крестьянского хозяйства, дом 17</textarea>
+                                                    <div class="input-field-label">
+                                                        <span>Фактический адрес</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-field required mb-3">
+                                                    <input type="text" class="input-field-element" placeholder="E-mail" value="mikhailov@gmail.com">
+                                                    <div class="input-field-label">
+                                                        <span>E-mail</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-field required mb-3">
+                                                    <input type="text" class="input-field-element" placeholder="Телефон" value="+7 (999) 000-00-00">
+                                                    <div class="input-field-label">
+                                                        <span>Телефон</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="user-form-row row">
+                                            <div class="col-md-12">
+                                                <div class="change-password-title">
+                                                    Сменить пароль
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-field mb-3">
+                                                    <input type="password" class="input-field-element" placeholder="Новый пароль">
+                                                    <div class="input-field-label">
+                                                        <span>Новый пароль</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-field mb-3">
+                                                    <input type="password" class="input-field-element" placeholder="Подтвердите новый пароль">
+                                                    <div class="input-field-label">
+                                                        <span>Подтвердите новый пароль</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-field required mb-3">
+                                                    <input type="password" class="input-field-element" placeholder="Введите текущий пароль">
+                                                    <div class="input-field-label">
+                                                        <span>Введите текущий пароль</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="user-form-buttons row">
+                                            <div class="col-md-6">
+                                                <button class="button button-block button-bordered user-edit-toggle">Отмена</button>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button class="button button-block" type="submit">Сохранить изменения</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="required-hint">
+                                            * Звездочкой отмечены обязательные поля.
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item cabinet-accordion-item">
+                        <div class="accordion-head">
+                            <div>
+                                <h2 class="accordion-title">Доставки</h2>
+                            </div>
+                            <div>
+                                <i class="accordion-plus icon-plus"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <table class="table-user">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Заказ
+                                            </td>
+                                            <td>
+                                                № 487909 от 06.05.2022
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Статус
+                                            </td>
+                                            <td>
+                                                Готов к получению
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Оплата
+                                            </td>
+                                            <td>
+                                                <a>Оплачен</a> <span class="separator"></span> Банковской картой онлайн
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Доставка
+                                            </td>
+                                            <td>
+                                                <a>г. Москва, Партийный переулок, дом 1, корпус 46, офис 527</a> 
+                                                <span class="separator"></span> Самовывоз 
+                                                <span class="separator"></span> Ежедневно 10:00-18:00
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="ship-slider-inner">
+                                    <div class="ship-slider swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="ship-product">
+                                                    <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                                    <div class="ship-product-content">
+                                                        <div class="ship-product-name">
+                                                            Кольцо обручальное из красного золота...
+                                                        </div>
+                                                        <div class="ship-product-props">
+                                                            <span>
+                                                                Размер:
+                                                            </span>
+                                                            <span>
+                                                                16,5
+                                                            </span>
+                                                        </div>
+                                                        <div class="ship-product-props">
+                                                            <span>
+                                                                Количество:
+                                                            </span>
+                                                            <span>
+                                                                100 шт.
+                                                            </span>
+                                                        </div>
+                                                        <div class="ship-product-price info-price">
+                                                            363 890 <i class="ship-ruble icon-ruble"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="ship-product">
+                                                    <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                                    <div class="ship-product-content">
+                                                        <div class="ship-product-name">
+                                                            Кольцо обручальное из красного золота...
+                                                        </div>
+                                                        <div class="ship-product-props">
+                                                            <span>
+                                                                Размер:
+                                                            </span>
+                                                            <span>
+                                                                16,5
+                                                            </span>
+                                                        </div>
+                                                        <div class="ship-product-props">
+                                                            <span>
+                                                                Количество:
+                                                            </span>
+                                                            <span>
+                                                                100 шт.
+                                                            </span>
+                                                        </div>
+                                                        <div class="ship-product-price info-price">
+                                                            363 890 <i class="ship-ruble icon-ruble"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="ship-product">
+                                                    <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                                    <div class="ship-product-content">
+                                                        <div class="ship-product-name">
+                                                            Кольцо обручальное из красного золота...
+                                                        </div>
+                                                        <div class="ship-product-props">
+                                                            <span>
+                                                                Размер:
+                                                            </span>
+                                                            <span>
+                                                                16,5
+                                                            </span>
+                                                        </div>
+                                                        <div class="ship-product-props">
+                                                            <span>
+                                                                Количество:
+                                                            </span>
+                                                            <span>
+                                                                100 шт.
+                                                            </span>
+                                                        </div>
+                                                        <div class="ship-product-price info-price">
+                                                            363 890 <i class="ship-ruble icon-ruble"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="ship-product">
+                                                    <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                                    <div class="ship-product-content">
+                                                        <div class="ship-product-name">
+                                                            Кольцо обручальное из красного золота...
+                                                        </div>
+                                                        <div class="ship-product-props">
+                                                            <span>
+                                                                Размер:
+                                                            </span>
+                                                            <span>
+                                                                16,5
+                                                            </span>
+                                                        </div>
+                                                        <div class="ship-product-props">
+                                                            <span>
+                                                                Количество:
+                                                            </span>
+                                                            <span>
+                                                                100 шт.
+                                                            </span>
+                                                        </div>
+                                                        <div class="ship-product-price info-price">
+                                                            363 890 <i class="ship-ruble icon-ruble"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="ship-product">
+                                                    <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                                    <div class="ship-product-content">
+                                                        <div class="ship-product-name">
+                                                            Кольцо обручальное из красного золота...
+                                                        </div>
+                                                        <div class="ship-product-props">
+                                                            <span>
+                                                                Размер:
+                                                            </span>
+                                                            <span>
+                                                                16,5
+                                                            </span>
+                                                        </div>
+                                                        <div class="ship-product-props">
+                                                            <span>
+                                                                Количество:
+                                                            </span>
+                                                            <span>
+                                                                100 шт.
+                                                            </span>
+                                                        </div>
+                                                        <div class="ship-product-price info-price">
+                                                            363 890 <i class="ship-ruble icon-ruble"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="ship-product">
+                                                    <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                                    <div class="ship-product-content">
+                                                        <div class="ship-product-name">
+                                                            Кольцо обручальное из красного золота...
+                                                        </div>
+                                                        <div class="ship-product-props">
+                                                            <span>
+                                                                Размер:
+                                                            </span>
+                                                            <span>
+                                                                16,5
+                                                            </span>
+                                                        </div>
+                                                        <div class="ship-product-props">
+                                                            <span>
+                                                                Количество:
+                                                            </span>
+                                                            <span>
+                                                                100 шт.
+                                                            </span>
+                                                        </div>
+                                                        <div class="ship-product-price info-price">
+                                                            363 890 <i class="ship-ruble icon-ruble"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="ship-product">
+                                                    <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                                    <div class="ship-product-content">
+                                                        <div class="ship-product-name">
+                                                            Кольцо обручальное из красного золота...
+                                                        </div>
+                                                        <div class="ship-product-props">
+                                                            <span>
+                                                                Размер:
+                                                            </span>
+                                                            <span>
+                                                                16,5
+                                                            </span>
+                                                        </div>
+                                                        <div class="ship-product-props">
+                                                            <span>
+                                                                Количество:
+                                                            </span>
+                                                            <span>
+                                                                100 шт.
+                                                            </span>
+                                                        </div>
+                                                        <div class="ship-product-price info-price">
+                                                            363 890 <i class="ship-ruble icon-ruble"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="empty">
+                                    <div class="empty-inner">
+                                        <div class="empty-title">В настоящее время у вас нет заказов</div>
+                                        <a href="" class="empty-button button button-bordered">
+                                            перейти к покупкам
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item cabinet-accordion-item">
+                        <div class="accordion-head">
+                            <div>
+                                <h2 class="accordion-title">Покупки</h2>
+                            </div>
+                            <div>
+                                <i class="accordion-plus icon-plus"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <div class="orders-header">
+                                    <form action="" id="orders_search_form" class="orders-search-form">
+                                        <input type="text" class="orders-search-input" placeholder="Название, артикул">
+                                        <div class="orders-search-icon icon-search"></div>
+                                    </form>
+                                </div>
+
+                                <div class="orders-row row">
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item cabinet-accordion-item">
+                        <div class="accordion-head">
+                            <div>
+                                <h2 class="accordion-title">История операций</h2>
+                            </div>
+                            <div>
+                                <i class="accordion-plus icon-plus"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <table class="table-operations">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                06.05.2022
+                                            </td>
+                                            <td>
+                                                Онлайн оплата
+                                            </td>
+                                            <td>
+                                                <div class="info-price table-price">
+                                                    1 500 000 <i class="icon-ruble"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <div class="operation-details">
+                                                        <span>Детали</span>
+
+                                                        <div class="icon-plus"></div>
+                                                    </div>    
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                06.05.2022
+                                            </td>
+                                            <td>
+                                                Онлайн оплата
+                                            </td>
+                                            <td>
+                                                <div class="info-price table-price">
+                                                    1 500 000 <i class="icon-ruble"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <div class="operation-details">
+                                                        <span>Детали</span>
+
+                                                        <div class="icon-plus"></div>
+                                                    </div>    
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                06.05.2022
+                                            </td>
+                                            <td>
+                                                Онлайн оплата
+                                            </td>
+                                            <td>
+                                                <div class="info-price table-price">
+                                                    1 500 000 <i class="icon-ruble"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <div class="operation-details">
+                                                        <span>Детали</span>
+
+                                                        <div class="icon-plus"></div>
+                                                    </div>    
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                06.05.2022
+                                            </td>
+                                            <td>
+                                                Онлайн оплата
+                                            </td>
+                                            <td>
+                                                <div class="info-price table-price">
+                                                    1 500 000 <i class="icon-ruble"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <div class="operation-details">
+                                                        <span>Детали</span>
+
+                                                        <div class="icon-plus"></div>
+                                                    </div>    
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                06.05.2022
+                                            </td>
+                                            <td>
+                                                Онлайн оплата
+                                            </td>
+                                            <td>
+                                                <div class="info-price table-price">
+                                                    1 500 000 <i class="icon-ruble"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <div class="operation-details">
+                                                        <span>Детали</span>
+
+                                                        <div class="icon-plus"></div>
+                                                    </div>    
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                06.05.2022
+                                            </td>
+                                            <td>
+                                                Онлайн оплата
+                                            </td>
+                                            <td>
+                                                <div class="info-price table-price">
+                                                    1 500 000 <i class="icon-ruble"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <div class="operation-details">
+                                                        <span>Детали</span>
+
+                                                        <div class="icon-plus"></div>
+                                                    </div>    
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item cabinet-accordion-item">
+                        <div class="accordion-head">
+                            <div>
+                                <h2 class="accordion-title">электронные чеки</h2>
+                            </div>
+                            <div>
+                                <i class="accordion-plus icon-plus"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <table class="table-operations">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                06.05.2022
+                                            </td>
+                                            <td>
+                                                Онлайн оплата
+                                            </td>
+                                            <td>
+                                                <div class="info-price table-price">
+                                                    1 500 000 <i class="icon-ruble"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <div class="receipt-actions">
+                                                        <div class="icon-receipt"></div>
+                                                        <div class="icon-share"></div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                06.05.2022
+                                            </td>
+                                            <td>
+                                                Онлайн оплата
+                                            </td>
+                                            <td>
+                                                <div class="info-price table-price">
+                                                    1 500 000 <i class="icon-ruble"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <div class="receipt-actions">
+                                                        <div class="icon-receipt"></div>
+                                                        <div class="icon-share"></div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                06.05.2022
+                                            </td>
+                                            <td>
+                                                Онлайн оплата
+                                            </td>
+                                            <td>
+                                                <div class="info-price table-price">
+                                                    1 500 000 <i class="icon-ruble"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <div class="receipt-actions">
+                                                        <div class="icon-receipt"></div>
+                                                        <div class="icon-share"></div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                06.05.2022
+                                            </td>
+                                            <td>
+                                                Онлайн оплата
+                                            </td>
+                                            <td>
+                                                <div class="info-price table-price">
+                                                    1 500 000 <i class="icon-ruble"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <div class="receipt-actions">
+                                                        <div class="icon-receipt"></div>
+                                                        <div class="icon-share"></div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                06.05.2022
+                                            </td>
+                                            <td>
+                                                Онлайн оплата
+                                            </td>
+                                            <td>
+                                                <div class="info-price table-price">
+                                                    1 500 000 <i class="icon-ruble"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <div class="receipt-actions">
+                                                        <div class="icon-receipt"></div>
+                                                        <div class="icon-share"></div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                06.05.2022
+                                            </td>
+                                            <td>
+                                                Онлайн оплата
+                                            </td>
+                                            <td>
+                                                <div class="info-price table-price">
+                                                    1 500 000 <i class="icon-ruble"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <div class="receipt-actions">
+                                                        <div class="icon-receipt"></div>
+                                                        <div class="icon-share"></div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item cabinet-accordion-item">
+                        <div class="accordion-head">
+                            <div>
+                                <h2 class="accordion-title">избранное</h2>
+                            </div>
+                            <div>
+                                <i class="accordion-plus icon-plus"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <div class="orders-header">
+                                    <div class="orders-header-item orders-header-flex">
+                                        <form action="" id="orders_search_form" class="orders-search-form">
+                                            <input type="text" class="orders-search-input" placeholder="Название, артикул">
+                                            <div class="orders-search-icon icon-search"></div>
+                                        </form>
+
+                                        <label class="checkbox">
+                                            <div class="checkbox-input">
+                                                <input type="checkbox" class="input-check">
+                                                <div class="input-check-state"></div>
+                                            </div>
+                                            <div class="checkbox-label">
+                                                СНОВА В НАЛИЧИЕ
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="orders-row row">
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-cabinet-product">
+                                        <div class="ship-product">
+                                            <div class="ship-product-photo" style="background-image: url(assets/images/product-photo.png);"></div>
+                                            <div class="ship-product-content">
+                                                <div class="ship-product-name">
+                                                    Кольцо обручальное из красного золота...
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Размер:
+                                                    </span>
+                                                    <span>
+                                                        16,5
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-props">
+                                                    <span>
+                                                        Количество:
+                                                    </span>
+                                                    <span>
+                                                        100 шт.
+                                                    </span>
+                                                </div>
+                                                <div class="ship-product-price info-price">
+                                                    363 890 <i class="ship-ruble icon-ruble"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item cabinet-accordion-item">
+                        <div class="accordion-head">
+                            <div>
+                                <h2 class="accordion-title">Программа лояльности</h2>
+                            </div>
+                            <div>
+                                <i class="accordion-plus icon-plus"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <div class="discount">
+                                    <div class="discount-row row g-0">
+                                        <div class="col-md-4">
+                                            <div class="discount-info">
+                                                <div class="discount-level">
+                                                    <div class="discount-level-counter">
+                                                        10%
+                                                    </div>
+                                                    <span>
+                                                        Скидка покупателя
+                                                    </span>
+                                                </div>
+    
+                                                <div class="orders-total">
+                                                    Сумма выкупа за последние 6 месяцев
+                                                    <div class="info-price total-price">3 043 343 <i class="icon-ruble"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="discount-text-content">
+                                                <p>
+                                                    Клиент получает накопительную скидку за объём: 
+                                                </p>
+                                                
+                                                <p>
+                                                    3% - От 100 000 руб. до 499 999 руб. <br>
+                                                    5% - От 500 000 руб. до 1 499 999 руб.  <br>
+                                                    7% - От 1 500 000 руб. до 2 999 999 руб. <br>
+                                                    10% - От 3 000 000 руб.
+                                                </p>
+                                                
+
+                                                <p>При достижение порога присваивается новый процент скидки. Порог рассчитывается за последние 6 месяцев и скидка применяется на все новые заказы после достижения порога. </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="discount-text-content-flex">
+                                                <div class="discount-text-content">
+                                                    <p>
+                                                        Скидка не применяется на изделий из золота и изделия с ДК и ПДК. Клиент получает скидку на работу по изготовлению ювелирной продукции, при этом на Золото и ДК и ПДК  дополнительная скидка клиенту не предоставляется.
+                                                    </p>
+                                                </div>
+                                                <div class="discount-text-content">
+                                                    <p>* ДК- Драгоценные камни <br>ПДК- Полудрагоценные камни</p>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <script src="assets/libs/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/libs/script.js"></script>
+</body>
+</html>
