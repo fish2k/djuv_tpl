@@ -104,15 +104,26 @@ $(document).ready(function() {
                 $(this).parent().removeClass("show-label");
             }
         })
-    });
+    }); 
 
     $(".user-edit-toggle").on("click", function() {
         $(".user-info-form").stop().slideToggle();
         $(".user-info").stop().slideToggle();
     });
+
+    $(".operation-open").each(function() {
+        $(this).on("click", function() {
+            $(this).toggleClass("active");
+
+            $(this)
+                .parent().parent().parent()
+                    .siblings("tr")
+                        .find(".operation-details-cell").toggle();
+        })
+    })
     
     // USER FORM SUBMIT
     $("#user_edit_form").submit(function(e) {
         e.preventDefault();
-    })
+    });
 });
