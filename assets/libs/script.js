@@ -77,10 +77,10 @@ $(document).ready(function() {
                 accordion.find(".accordion-content").stop().slideUp(250);
                 $(this).find(".accordion-content").stop().slideDown(250);
             }
-        })
+        });
     }
 
-    $(".accordion-content").on("click", e => e.stopPropagation())
+    $(".accordion-content").on("click", e => e.stopPropagation());
 
     $(".accordion-plus").on("click", function(e) {
         e.stopPropagation();
@@ -94,7 +94,7 @@ $(document).ready(function() {
 
     $(".input-field-element").each(function() {
         if ($(this).val().length > 0) {
-            $(this).parent().addClass("show-label")
+            $(this).parent().addClass("show-label");
         }
 
         $(this).on("keyup", function() {
@@ -103,7 +103,7 @@ $(document).ready(function() {
             } else {
                 $(this).parent().removeClass("show-label");
             }
-        })
+        });
     }); 
 
     $(".user-edit-toggle").on("click", function() {
@@ -119,8 +119,19 @@ $(document).ready(function() {
                 .parent().parent().parent()
                     .siblings("tr")
                         .find(".operation-details-cell").toggle();
-        })
-    })
+        });
+    });
+
+    $("[name='ship_type']").each(function() {
+        $(this).on("click", function() {
+            let shipTypeValueClass = $(this).val();
+            let shipType = $(this).parent().siblings().text();
+            
+            $(".ship-item").hide();
+            $("." + shipTypeValueClass).show();
+            $(".ship-type-selected").text(shipType)
+        });
+    });
     
     // USER FORM SUBMIT
     $("#user_edit_form").submit(function(e) {

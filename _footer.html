@@ -59,3 +59,217 @@
         <a href="#" class="socials-link"><i class="icon-ok"></i></a>
     </div>
 </div>
+
+<!-- Order processing modal -->
+<div class="modal fade modal-order" data-bs-backdrop="static" id="orderProcessModal" tabindex="-1" aria-labelledby="orderProcessModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-message">
+            Далее вы будете перенаправлены на страницу банка для проведения платежа
+        </div>
+    </div>
+</div>
+
+<!-- auth modal -->
+<div class="modal fade modal-auth" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-head">
+                <div class="modal-head-title">Войдите или создайте аккаунт</div>
+                <div class="modal-head-close" data-bs-dismiss="modal">
+                    <i class="icon-close"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="auth-type">
+                    <div class="auth-type-item auth-type-login active">Войти</div>
+                    <div class="auth-type-item auth-type-reg">зарегистрироваться</div>
+                </div>
+
+                <div class="auth-login">
+                    <form action="">
+                        <div class="input-field mb-3">
+                            <input type="text" class="input-field-element" placeholder="E-mail" value="">
+                            <div class="input-field-label">
+                                <span>E-mail</span>
+                            </div>
+                        </div>
+                        <div class="input-field mb-3">
+                            <input type="text" class="input-field-element" placeholder="Пароль" value="">
+                            <div class="input-field-label">
+                                <span>Пароль</span>
+                            </div>
+                        </div>
+
+                        <label class="checkbox mb-1">
+                            <div class="checkbox-input">
+                                <input type="checkbox" name="remember_me" class="input-check" checked>
+                                <div class="input-check-state"></div>
+                            </div>
+                            <div class="checkbox-label">
+                                Запомнить меня
+                            </div>
+                        </label>
+
+                        <a href="" class="forgot-pass">
+                            Забыли пароль?
+                        </a>
+
+                        <button class="button button-block mt-3">Войти</button>
+                    </form>
+                </div>
+                <div class="auth-register" style="display: none">
+                    <form action="">
+                        <div class="reg-type mb-3">
+                            <label class="checkbox checkbox-inline">
+                                <div class="checkbox-input">
+                                    <input type="radio" name="reg_type" value="fiz" class="input-check" checked>
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    Физическое лицо
+                                </div>
+                            </label>
+
+                            <label class="checkbox checkbox-inline">
+                                <div class="checkbox-input">
+                                    <input type="radio" name="reg_type" value="yur" class="input-check">
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    Юридическое лицо
+                                </div>
+                            </label>
+
+                            <label class="checkbox checkbox-inline">
+                                <div class="checkbox-input">
+                                    <input type="radio" name="reg_type" value="ip" class="input-check">
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    ИП
+                                </div>
+                            </label>
+                        </div>
+                        <div class="user-form-row row yur "> 
+                            <div class="col-12">
+                                <div class="input-field required mb-3">
+                                    <input type="text" class="input-field-element" placeholder="Наименование организации">
+                                    <div class="input-field-label">
+                                        <span>Наименование организации</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-field required mb-3">
+                                    <input type="text" class="input-field-element" placeholder="ИНН">
+                                    <div class="input-field-label">
+                                        <span>ИНН</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-field required mb-3">
+                                    <input type="text" class="input-field-element" placeholder="ОГРН">
+                                    <div class="input-field-label">
+                                        <span>ОГРН</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-field required mb-3">
+                                    <input type="text" class="input-field-element" placeholder="Юридический адрес">
+                                    <div class="input-field-label">
+                                        <span>Юридический адрес</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-field contacts-textarea required mb-3">
+                                    <textarea
+                                            name="feedback_message"
+                                            id="feedback_message"
+                                            class="input-field-element"
+                                            placeholder="Фактический адрес"
+                                    ></textarea>
+                                    <div class="input-field-label">
+                                        <span>Фактический адрес</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-field required mb-3">
+                                    <input type="text" class="input-field-element" placeholder="E-mail">
+                                    <div class="input-field-label">
+                                        <span>E-mail</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-field required mb-3">
+                                    <input type="text" class="input-field-element" placeholder="Телефон">
+                                    <div class="input-field-label">
+                                        <span>Телефон</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-field required mb-3">
+                                    <input type="password" class="input-field-element" placeholder="Пароль">
+                                    <div class="input-field-label">
+                                        <span>Пароль</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="checkbox mb-3">
+                                    <div class="checkbox-input">
+                                        <input type="checkbox" class="input-check">
+                                        <div class="input-check-state"></div>
+                                    </div>
+                                    <div class="checkbox-label">
+                                        Я ознакомлен (а) с <a href="privacy.html">пользовательским соглашением</a> и <a href="privacy.html">политикой конфеденциальности</a>
+                                    </div>
+                                </label>
+                                <label class="checkbox mb-3 mt-3">
+                                    <div class="checkbox-input">
+                                        <input type="checkbox" class="input-check">
+                                        <div class="input-check-state"></div>
+                                    </div>
+                                    <div class="checkbox-label">
+                                        Я хочу получать информацию о специальных предложениях и акциях на e-mail
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col-12">
+                                <button class="button button-block">Сохранить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        // $("#authModal").modal("show");
+
+        $(".auth-type-item").on("click", function() {
+            console.log('dsada');
+            if ($(this).hasClass("auth-type-login")) {
+                $(".auth-type-item").removeClass("active");
+                $(this).addClass("active");
+                $(".auth-login").show();
+                $(".auth-register").hide();
+            }
+
+            if ($(this).hasClass("auth-type-reg")) {
+                $(".auth-type-item").removeClass("active");
+                $(this).addClass("active");
+                $(".auth-login").hide();
+                $(".auth-register").show();
+            }
+        });
+    });
+</script>

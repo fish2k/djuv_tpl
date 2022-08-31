@@ -300,6 +300,298 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="details details-ship-payment">
+                        <div class="row g-0">
+                            <div class="col-md-6 cart-ship-block">
+                                <div class="cart-container-header cart-container-left">
+                                    <h2>Способ доставки</h2>
+                                </div>
+
+                                <div class="cart-container-left cart-data-container">
+                                    <div class="accordion-item accordion-block">
+                                        <div class="accordion-head">
+                                            <div>
+                                                <h2 class="accordion-title ship-type-selected">Выбрать способ доставки</h2>
+                                            </div>
+                                            <div>
+                                                <i class="accordion-plus icon-plus"></i>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-content">
+                                            <div class="accordion-body">
+                                                <label class="checkbox text-uppercase mb-3">
+                                                    <div class="checkbox-input">
+                                                        <input type="radio" name="ship_type" value="courier" class="input-check">
+                                                        <div class="input-check-state"></div>
+                                                    </div>
+                                                    <div class="checkbox-label">
+                                                        доставка курьером
+                                                    </div>
+                                                </label>
+                                                <label class="checkbox text-uppercase mb-3">
+                                                    <div class="checkbox-input">
+                                                        <input type="radio" name="ship_type" value="courier_services" class="input-check">
+                                                        <div class="input-check-state"></div>
+                                                    </div>
+                                                    <div class="checkbox-label">
+                                                        Доставка  курьерскими службами по россии
+                                                    </div>
+                                                </label>
+                                                <label class="checkbox text-uppercase">
+                                                    <div class="checkbox-input">
+                                                        <input type="radio" name="ship_type" value="self_ship" class="input-check">
+                                                        <div class="input-check-state"></div>
+                                                    </div>
+                                                    <div class="checkbox-label">
+                                                        Самовывоз
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ship-list">
+                                        <div class="ship-item courier">
+                                            <form action="">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <label class="checkbox mb-3 mt-3">
+                                                            <div class="checkbox-input">
+                                                                <input type="radio" name="courier_courier" value="courier_m" class="input-check">
+                                                                <div class="input-check-state"></div>
+                                                            </div>
+                                                            <div class="checkbox-label">
+                                                                Доставка по Москве
+                                                            </div>
+                                                        </label>
+                                                        <label class="checkbox mb-3">
+                                                            <div class="checkbox-input">
+                                                                <input type="radio" name="courier_courier" value="courier_mo" class="input-check">
+                                                                <div class="input-check-state"></div>
+                                                            </div>
+                                                            <div class="checkbox-label">
+                                                                Доставка по Москве за пределам МКАД и МО
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-label">
+                                                            Введите пожалуйста, Ваш адрес
+                                                        </div>
+
+                                                        <div class="input-field required mb-3">
+                                                            <input type="text" class="input-field-element" placeholder="Город, улица, дом, корпус, строение" value="">
+                                                            <div class="input-field-label">
+                                                                <span>Город, улица, дом, корпус, строение</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="input-field required mb-3">
+                                                            <input type="text" class="input-field-element" placeholder="Квартира/офис" value="">
+                                                            <div class="input-field-label">
+                                                                <span>Квартира/офис</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="input-field required mb-3">
+                                                            <input type="text" class="input-field-element" placeholder="Подъезд" value="">
+                                                            <div class="input-field-label">
+                                                                <span>Подъезд</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="input-field required mb-3">
+                                                            <input type="text" class="input-field-element" placeholder="Этаж" value="">
+                                                            <div class="input-field-label">
+                                                                <span>Этаж</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="input-field required mb-3">
+                                                            <input type="text" class="input-field-element" placeholder="Домофон" value="">
+                                                            <div class="input-field-label">
+                                                                <span>Домофон</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="input-field input-field-textarea">
+                                                            <textarea
+                                                                    name="feedback_message"
+                                                                    id="feedback_message"
+                                                                    class="input-field-element"
+                                                                    placeholder="Введите Ваш комментарий для курьера (115 символов)"
+                                                            ></textarea>
+                                                        </div>
+
+                                                        <div class="form-message">
+                                                            * Звездочкой отмечены обязательные поля. Это необходимая информация для связи с Вами.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="ship-item courier_services">
+                                            <form action="">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="form-label">
+                                                            Выберите курьерскую службу
+                                                        </div>
+                                                        <label class="checkbox mb-3 mt-3">
+                                                            <div class="checkbox-input">
+                                                                <input type="radio" name="courier_services_type" value="courier_services_m" class="input-check">
+                                                                <div class="input-check-state"></div>
+                                                            </div>
+                                                            <div class="checkbox-label">
+                                                                Доставка по Москве
+                                                            </div>
+                                                        </label>
+                                                        <label class="checkbox mb-3">
+                                                            <div class="checkbox-input">
+                                                                <input type="radio" name="courier_services_type" value="courier_services_mo" class="input-check">
+                                                                <div class="input-check-state"></div>
+                                                            </div>
+                                                            <div class="checkbox-label">
+                                                                Доставка по Москве за пределам МКАД и МО
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-label">
+                                                            Введите пожалуйста, Ваш адрес
+                                                        </div>
+                                                        <div class="input-field required mb-3">
+                                                            <input type="text" class="input-field-element" placeholder="Город, улица, дом, корпус, строение" value="">
+                                                            <div class="input-field-label">
+                                                                <span>Город, улица, дом, корпус, строение</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="input-field required mb-3">
+                                                            <input type="text" class="input-field-element" placeholder="Квартира/офис" value="">
+                                                            <div class="input-field-label">
+                                                                <span>Квартира/офис</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="input-field required mb-3">
+                                                            <input type="text" class="input-field-element" placeholder="Подъезд" value="">
+                                                            <div class="input-field-label">
+                                                                <span>Подъезд</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="input-field required mb-3">
+                                                            <input type="text" class="input-field-element" placeholder="Этаж" value="">
+                                                            <div class="input-field-label">
+                                                                <span>Этаж</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="input-field required mb-3">
+                                                            <input type="text" class="input-field-element" placeholder="Домофон" value="">
+                                                            <div class="input-field-label">
+                                                                <span>Домофон</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="input-field input-field-textarea">
+                                                            <textarea
+                                                                    name="feedback_message"
+                                                                    id="feedback_message"
+                                                                    class="input-field-element"
+                                                                    placeholder="Введите Ваш комментарий для курьера (115 символов)"
+                                                            ></textarea>
+                                                        </div>
+                                                        <div class="form-message">
+                                                            * Звездочкой отмечены обязательные поля. Это необходимая информация для связи с Вами. 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="ship-item self_ship">
+                                            <form action="">
+                                                <div class="form-label">
+                                                    Склад:
+                                                </div>
+
+                                                <label class="checkbox mb-3">
+                                                    <div class="checkbox-input">
+                                                        <input type="radio" name="self_ship_type" value="bronnitsi" class="input-check">
+                                                        <div class="input-check-state"></div>
+                                                    </div>
+                                                    <div class="checkbox-label">
+                                                        Московская область, город Бронницы, <br>Комсомольский переулок, 53
+                                                    </div>
+                                                </label>
+
+                                                <label class="checkbox mb-3">
+                                                    <div class="checkbox-input">
+                                                        <input type="radio" name="self_ship_type" value="partini_pereulok" class="input-check">
+                                                        <div class="input-check-state"></div>
+                                                    </div>
+                                                    <div class="checkbox-label">
+                                                        город Москва, Партийный переулок, дом 1, <br>корпус 46, офис 527
+                                                    </div>
+                                                </label>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="cart-container-header cart-container-left">
+                                    <h2>Способ оплаты</h2>
+                                </div>
+
+                                <div class="cart-container-left cart-data-container">
+                                    <label class="checkbox text-uppercase mb-3">
+                                        <div class="checkbox-input">
+                                            <input type="radio" name="payment_type" value="card" class="input-check">
+                                            <div class="input-check-state"></div>
+                                        </div>
+                                        <div class="checkbox-label">
+                                            Банковской картой онлайн
+                                        </div>
+                                    </label>
+                                    <label class="checkbox text-uppercase mb-3">
+                                        <div class="checkbox-input">
+                                            <input type="radio" name="payment_type" value="terminal" class="input-check">
+                                            <div class="input-check-state"></div>
+                                        </div>
+                                        <div class="checkbox-label">
+                                            Банковской картой при получении
+                                        </div>
+                                    </label>
+                                    <label class="checkbox text-uppercase">
+                                        <div class="checkbox-input">
+                                            <input type="radio" name="payment_type" value="cash" class="input-check">
+                                            <div class="input-check-state"></div>
+                                        </div>
+                                        <div class="checkbox-label">
+                                            Наличными при  получении 
+                                        </div>
+                                    </label>
+
+                                    <div class="payment-message">
+                                        К оплате принимаются карты Visa, Master Card, Мир
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="cart-side">
                     <div class="cart-side-affix">
