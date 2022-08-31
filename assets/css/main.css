@@ -2603,6 +2603,114 @@ em {
     margin-right: 20px;
 }
 
+.header-mob {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: var(--accent);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: var(--brown);
+
+    height: 51px;
+}
+
+.header-mob-logo img {
+    max-width: 219px;
+}
+
+.header-mob-logo-link {
+    display: block;
+}
+
+.header-burger-inner {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.header-burger {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    width: 100%;
+    height: 15px;
+}
+
+.header-burger-line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--brown);
+}
+
+.header-burger-line:nth-child(2) {
+    top: 7px;
+}
+
+.header-burger-line:nth-child(3) {
+    top: 14px;
+}
+
+.header-mob-cart {
+    display: block;
+    font-size: 24px;
+    line-height: 12px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.responsive-display {
+    display: none;
+}
+
+.header-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    z-index: 10;
+
+    margin: 0;
+    padding: 15px 0 10px;
+    list-style-type: none;
+
+    background-color: var(--accent);
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: var(--brown);
+}
+
+.header-menu-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header-menu-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header-menu-link i {
+    font-size: 26px;
+}
+
+.header-menu-auth {
+    color: var(--blue);
+}
+
+/* media */
 @media (max-width: 1800px) {
     .header-nav-link {
         font-size: 12px;
@@ -2634,6 +2742,10 @@ em {
 }
 
 @media (max-width: 1024px) {
+    .responsive-display {
+        display: block;
+    }
+
     .header:not(.header-page) {
         display: none;
     }
@@ -2697,6 +2809,10 @@ em {
 @media (max-width: 576px) {
     .section-bordered {
         border-width: 0 0 1px 0;
+    }
+
+    .header-page h2 {
+        font-size: 20px;
     }
 
     .section-brand .container,
