@@ -253,7 +253,9 @@
 
 <script>
     $(document).ready(function() {
-        // $("#authModal").modal("show");
+        $(".action-auth").on("click", function() {
+            $("#authModal").modal("show");
+        })
 
         $(".auth-type-item").on("click", function() {
             console.log('dsada');
