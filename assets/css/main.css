@@ -114,6 +114,7 @@ img, svg {
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .header-nav-link:hover {
@@ -2710,6 +2711,49 @@ em {
     color: var(--blue);
 }
 
+.footer-col-show,
+.footer-accordion {
+    display: none;
+}
+
+.footer-accordion {
+    border: 1px solid var(--accent);
+}
+
+.footer-accordion-item {
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: 1px solid var(--accent);
+}
+
+.footer-accordion-item:last-child {
+    border-bottom: none;
+}
+
+.footer-accordion-item .accordion-head {
+    background-color: transparent;
+}
+
+.footer-accordion-item .accordion-title,
+.footer-accordion-item .accordion-plus {
+    color: var(--accent);
+}
+
+.footer-accordion-item .accordion-body {
+    background-color: transparent;
+    padding-top: 0;
+}
+
+.footer-accordion-content {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 15px;
+}
+
+.show-mobile {
+    display: none;
+}
+
 /* media */
 @media (max-width: 1800px) {
     .header-nav-link {
@@ -2718,6 +2762,14 @@ em {
 }
 
 @media (max-width: 1400px) {
+    .footer-col-content {
+        padding: 20px;
+    }
+
+    .header-nav {
+        grid-column-gap: 10px;
+    }
+
     .header-logo img {
         max-width: 100%;
     }
@@ -2742,7 +2794,51 @@ em {
 }
 
 @media (max-width: 1024px) {
+    .header-nav-item:not(:nth-child(1)) {
+        display: none;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .footer-col-hide {
+        display: none;
+    }
+
+    .footer-col-show {
+        display: block;
+    }
+
+    .product-grid-col:nth-of-type(2n)::before {
+       opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
     .responsive-display {
+        display: block;
+    }
+
+    .show-mobile {
+        display: block;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .brand-bg {
+        padding-bottom: 100%;
+    }
+
+    body {
+        margin-bottom: 58px;
+    }
+
+    .footer-accordion {
         display: block;
     }
 
@@ -2797,12 +2893,6 @@ em {
     .product-card-name {
         padding-left: 0;
         padding-right: 0;
-    }
-}
-
-@media (max-width: 991px) {
-    .product-grid-col:nth-of-type(2n)::before {
-       opacity: 0;
     }
 }
 

@@ -60,35 +60,7 @@ $(document).ready(function() {
     const shipSlider = new Swiper(".ship-slider", {
         slidesPerView: 6.8,
         spaceBetween: 25,
-    })
-
-    const accordion = $(".accordion-item");
-
-    accordion.on("click", function() {
-        accordion.removeClass("active");
-        $(this).addClass("active");
-
-        checkActiveAccordion();
     });
-
-    const checkActiveAccordion = () => {
-        accordion.each(function() {
-            if ($(this).hasClass("active")) {
-                accordion.find(".accordion-content").stop().slideUp(250);
-                $(this).find(".accordion-content").stop().slideDown(250);
-            }
-        });
-    }
-
-    $(".accordion-content").on("click", e => e.stopPropagation());
-
-    $(".accordion-plus").on("click", function(e) {
-        e.stopPropagation();
-        $(this).parent().parent().parent()
-            .removeClass("active").find(".accordion-content").stop().slideUp();
-    })
-
-    checkActiveAccordion();
 
     const inputField = $(".input-field");
 

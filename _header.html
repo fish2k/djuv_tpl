@@ -1,7 +1,7 @@
 <div class="header">
     <div class="container">
         <div class="row">
-            <div class="col-xl-4 col-lg-5 header-flex-item">
+            <div class="col-xl-4 col-lg-5 col-4 header-flex-item">
                 <div class="header-nav">
                     <div class="header-nav-item open_catalog">
                         <a href="#" class="header-nav-link">Каталог <i class="icon-plus"></i></a>
@@ -17,12 +17,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-3 header-flex-item header-item-center">
+            <div class="col-xl-4 col-lg-3 col-4 header-flex-item header-item-center">
                 <a href="/" class="header-logo">
                     <img src="assets/images/logo.png" alt="">
                 </a>
             </div>
-            <div class="col-xl-4 col-lg-4 header-flex-item header-item-right">
+            <div class="col-xl-4 col-lg-4 col-4 header-flex-item header-item-right">
                 <div class="header-btns">
                     <a href="#" class="header-btn"><i class="icon-heart"></i></a>
                     <a href="#" class="header-btn"><i class="icon-search"></i></a>
@@ -224,8 +224,20 @@
         // инициализация слайдера в шапке
         const initHeaderSlider = function() {
             return new Swiper(".header-slider", {
-                slidesPerView: 6.5,
-                spaceBetween: 30,
+                breakpoints: {
+                    0: {
+                        slidesPerView: 2.5,
+                        spaceBetween: 30
+                    },
+                    1200: {
+                        slidesPerView: 3.5,
+                        spaceBetween: 30,
+                    },
+                    1400: {
+                        slidesPerView: 6.5,
+                        spaceBetween: 30,
+                    }
+                }
             });
         }
 

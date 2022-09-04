@@ -5,19 +5,19 @@
 
     <div class="container">
         <div class="row g-0 row-footer-head">
-            <div class="col-xl-6">
+            <div class="col-xl-6 col-md-6 col-4">
                 <div class="footer-col-head heading-2">Каталог</div>
             </div>
-            <div class="col-xl-3">
+            <div class="col-xl-3 col-md-3 col-4">
                 <div class="footer-col-head heading-2">О бренде</div>
             </div>
-            <div class="col-xl-3">
+            <div class="col-xl-3 col-md-3 col-4">
                 <div class="footer-col-head heading-2">Контакты</div>
             </div>
         </div>
 
         <div class="row g-0 row-footer">
-            <div class="col-xl-6">
+            <div class="col-xl-6 col-md-6 col-4 footer-col-hide">
                 <div class="footer-col-flex">
                     <div class="footer-col-content">
                         <a href="" class="footer-link">Цепи</a>
@@ -34,7 +34,15 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3">
+            <div class="col-xl-6 col-md-4 col-4 footer-col-show">
+                <div class="footer-col-flex">
+                    <div class="footer-col-content">
+                        <a href="catalog.html" class="footer-link">Церковный дом</a>
+                        <a href="catalog.html" class="footer-link">Церковный магазин</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3 col-4">
                 <div class="footer-col-content">
                     <a href="" class="footer-link">Наше ремесло</a>
                     <a href="" class="footer-link">Новости</a>
@@ -42,7 +50,7 @@
                     <a href="" class="footer-link">Политика обработки персональных данных</a>
                 </div>
             </div>
-            <div class="col-xl-3">
+            <div class="col-xl-3 col-md-3 col-4">
                 <div class="footer-col-content">
                     <a href="" class="footer-link">+ 7 495 796-24-61</a>
                     <a href="" class="footer-link">info@dangold.ru</a>
@@ -50,6 +58,68 @@
                     <div class="footer-link">г. Бронницы, Комсомольский пер, 53 </div>
                 </div>
             </div>
+        </div>
+
+        <div class="footer-accordion">
+            <div class="accordion-item footer-accordion-item">
+                <div class="accordion-head">
+                    <div>
+                        <h2 class="accordion-title">Каталог</h2>
+                    </div>
+                    <div>
+                        <i class="accordion-plus icon-plus"></i>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <div class="footer-accordion-content">
+                            <a href="catalog.html" class="footer-link">Церковный дом</a>
+                            <a href="catalog.html" class="footer-link">Церковный магазин</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item footer-accordion-item">
+                <div class="accordion-head">
+                    <div>
+                        <h2 class="accordion-title">О бренде</h2>
+                    </div>
+                    <div>
+                        <i class="accordion-plus icon-plus"></i>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <div class="footer-accordion-content">
+                            <a href="" class="footer-link">Наше ремесло</a>
+                            <a href="" class="footer-link">Новости</a>
+                            <a href="" class="footer-link">Доставка и оплата</a>
+                            <a href="" class="footer-link">Политика обработки персональных данных</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item footer-accordion-item">
+                <div class="accordion-head">
+                    <div>
+                        <h2 class="accordion-title">Контакты</h2>
+                    </div>
+                    <div>
+                        <i class="accordion-plus icon-plus"></i>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <div class="footer-accordion-content">
+                            <a href="" class="footer-link">+ 7 495 796-24-61</a>
+                            <a href="" class="footer-link">info@dangold.ru</a>
+                            <div class="footer-link">г. Москва, Партийный пер, д. 1 к. 46, офис 527</div>
+                            <div class="footer-link">г. Бронницы, Комсомольский пер, 53 </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
 
@@ -258,7 +328,6 @@
         })
 
         $(".auth-type-item").on("click", function() {
-            console.log('dsada');
             if ($(this).hasClass("auth-type-login")) {
                 $(".auth-type-item").removeClass("active");
                 $(this).addClass("active");
@@ -273,5 +342,33 @@
                 $(".auth-register").show();
             }
         });
+
+        const accordion = $(".accordion-item");
+
+        accordion.on("click", function() {
+            accordion.removeClass("active");
+            $(this).addClass("active");
+
+            checkActiveAccordion();
+        });
+
+        const checkActiveAccordion = () => {
+            accordion.each(function() {
+                if ($(this).hasClass("active")) {
+                    accordion.find(".accordion-content").stop().slideUp(250);
+                    $(this).find(".accordion-content").stop().slideDown(250);
+                }
+            });
+        }
+
+        $(".accordion-content").on("click", e => e.stopPropagation());
+
+        $(".accordion-plus").on("click", function(e) {
+            e.stopPropagation();
+            $(this).parent().parent().parent()
+                .removeClass("active").find(".accordion-content").stop().slideUp();
+        })
+
+        checkActiveAccordion();
     });
 </script>
