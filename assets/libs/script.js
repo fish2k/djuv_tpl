@@ -24,8 +24,9 @@ $(document).ready(function() {
                 direction: "horizontal",
                 spaceBetween: 15,
                 autoHeight: false,
+                slidesPerView: 2.5
             },
-            481: {
+            768: {
                 direction: "vertical",
                 spaceBetween: 30,
                 autoHeight: true,
@@ -44,6 +45,19 @@ $(document).ready(function() {
 
         thumbs: {
             swiper: detailThumbsSlider,
+        },
+
+        breakpoints: {
+            0: {
+                pagination: {
+                    el: ".product-slider-pagination2",
+                }
+            },
+            767: {
+                pagination: {
+                    el: ".product-slider-pagination",
+                }
+            }
         }
     });
 
@@ -54,6 +68,18 @@ $(document).ready(function() {
         navigation: {
             prevEl: ".more-nav-prev",
             nextEl: ".more-nav-next",
+        },
+
+        breakpoints: {
+            0: {
+                slidesPerView: 2
+            },
+            767: {
+                slidesPerView: 3
+            },
+            991: {
+                slidesPerView: 4,
+            }
         }
     });
 
@@ -108,5 +134,21 @@ $(document).ready(function() {
     // USER FORM SUBMIT
     $("#user_edit_form").submit(function(e) {
         e.preventDefault();
+    });
+
+    $(".header-burger-inner").on("click", function() {
+        
+    });
+
+    $(".about-body-back").on("click", function(e){
+        e.preventDefault();
+        $(".about-side").css("display", "flex");
+        $(".about-body, .news-side").hide();
+    });
+
+    $(".about-body-news").on("click", function(e){
+        e.preventDefault();
+        $(".news-side").css("display", "flex");
+        $(".about-body").hide();
     });
 });

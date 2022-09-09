@@ -7,6 +7,7 @@
 
     <title>Document</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/fonts/danilov-icons/style.css">
     <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css">
@@ -64,21 +65,26 @@
                                 <div class="product-slider-main swiper">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <div class="product-slide-photo" style="background-image: url(assets/images/product-photo-large.png);"></div>
+                                            <a href="assets/images/product-photo-large.png" data-fancybox="detail-photo" class="product-slide-photo" 
+                                                style="background-image: url(assets/images/product-photo-large.png);"></a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="product-slide-photo" style="background-image: url(assets/images/product-photo-large.png);"></div>
+                                            <a href="assets/images/product-photo-large.png" data-fancybox="detail-photo" class="product-slide-photo" 
+                                                style="background-image: url(assets/images/product-photo-large.png);"></a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="product-slide-photo" style="background-image: url(assets/images/product-photo-large.png);"></div>
+                                            <a href="assets/images/product-photo-large.png" data-fancybox="detail-photo" class="product-slide-photo" 
+                                                style="background-image: url(assets/images/product-photo-large.png);"></a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="product-slide-photo" style="background-image: url(assets/images/product-photo-large.png);"></div>
+                                            <a href="assets/images/product-photo-large.png" data-fancybox="detail-photo" class="product-slide-photo" 
+                                                style="background-image: url(assets/images/product-photo-large.png);"></a>
                                         </div>
                                     </div>
+
+                                    <div class="product-slider-pagination2"></div>
                                 </div>
                             </div>
-
                             <div class="product-slider-pagination"></div>
                         </div>
                         <div class="col-md-6 col-12">
@@ -144,7 +150,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6 col-12 product-detail-info-block">
+                        <div class="col-md-6 col-12 product-detail-info-block hide-mobile">
                             <div class="header header-page">
                                 <h2>Описание</h2>
                             </div>
@@ -153,7 +159,7 @@
                                 Содержание складня посвящено Пресвятой Богородице и повторяет иконографию известных русских икон XVI в. – «Похвала Богоматери» с Акафистом и сам текст Акафиста. Иконография «Похвалы» сложилась в византийском искусстве к XIV в. в период активной разработки новых Богородичных тем. Одним из ее литературных источников могла быть литургическая песнь из канона Святого Германа Царьградского (VIII в.) «Свыше пророцы тя предвозвестиша…». Часто на иконах композиция «Похвалы Богоматери» обрамлялась клеймами, иллюстрирующими текст посвященного Ей Акафиста, созданного предположительно Романом Сладкопевцем в VI в.
                             </div>
                         </div>
-                        <div class="col-md-6 col-12">
+                        <div class="col-md-6 col-12 hide-mobile">
                             <div class="header header-page header-page-flex" id="myTab" role="tablist">
                                 <div class="header-page-tab active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
                                     <h2>Характеристики</h2>
@@ -197,52 +203,259 @@
                                 </div>
                                 <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                                     <div class="product-detail-info">
-                                        <div class="accord">
-                                            <div class="accord-item">
-                                                <div class="accord-head collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                                    <div class="accord-title">доставка курьером по Москве в пределах МКАД</div>
-                                                    <div class="accord-icon"><i class="icon-plus"></i></div>
+                                        <div class="accordion-item product-accordion-item">
+                                            <div class="accordion-head">
+                                                <div>
+                                                    <h2 class="accordion-title">доставка курьером по Москве в пределах МКАД</h2>
                                                 </div>
-                                                <div class="accord-body collapse" id="flush-collapseOne" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                                    <div>
-                                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, aspernatur!
-                                                    </div>
+                                                <div>
+                                                    <i class="accordion-plus icon-plus"></i>
                                                 </div>
                                             </div>
-                                            <div class="accord-item">
-                                                <div class="accord-head collapsed">
-                                                    <div class="accord-title">доставка курьером по Москве (за пределами МКАД) и МО</div>
-                                                    <div class="accord-icon"><i class="icon-plus"></i></div>
-                                                </div>
-                                                <div class="accord-body collapse">
-                                                    <div>
-                                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, aspernatur!                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accord-item">
-                                                <div class="accord-head collapsed">
-                                                    <div class="accord-title">Самовывоз</div>
-                                                    <div class="accord-icon"><i class="icon-plus"></i></div>
-                                                </div>
-                                                <div class="accord-body collapse">
-                                                    <div>
-                                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, aspernatur!
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accord-item">
-                                                <div class="accord-head collapsed">
-                                                    <div class="accord-title">Доставка курьерскими службами по россии </div>
-                                                    <div class="accord-icon"><i class="icon-plus"></i></div>
-                                                </div>
-                                                <div class="accord-body collapse">
-                                                    <div>
-                                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, aspernatur!
-                                                    </div>
+                                            <div class="accordion-content">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        Бесплатно при сумме выкупа: Москва от 4 000 р. <br>
+                                                        При меньшей сумме выкупа 300р.
+                                                    </p>
+                                                    
+                                                    <em>Оплата:</em>
+                                                    <ul>
+                                                        <li>онлайн</li>
+                                                        <li>картой или наличными при получении</li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <div class="accordion-item product-accordion-item">
+                                            <div class="accordion-head">
+                                                <div>
+                                                    <h2 class="accordion-title">доставка курьером по Москве (за пределами МКАД) и МО</h2>
+                                                </div>
+                                                <div>
+                                                    <i class="accordion-plus icon-plus"></i>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-content">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        Бесплатно при сумме выкупа: Москва от 5 000 р. <br>
+                                                        При меньшей сумме выкупа 350р.
+                                                    </p>
+                                                    <em>Оплата:</em>
+                                                    <ul>
+                                                        <li>онлайн</li>
+                                                        <li>картой или наличными при получении</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item product-accordion-item">
+                                            <div class="accordion-head">
+                                                <div>
+                                                    <h2 class="accordion-title">Самовывоз</h2>
+                                                </div>
+                                                <div>
+                                                    <i class="accordion-plus icon-plus"></i>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-content">
+                                                <div class="accordion-body">
+                                                    <em>Склад:</em>
+                                                    <p>МО, г. Бронницы, Комсомольский пер., 53 </p>
+                                                    <em>Шоурум:</em>
+                                                    <p>г. Москва, Партийный пер. , д. 1, к. 46, офис 527 </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item product-accordion-item">
+                                            <div class="accordion-head">
+                                                <div>
+                                                    <h2 class="accordion-title">Доставка курьерскими службами по россии </h2>
+                                                </div>
+                                                <div>
+                                                    <i class="accordion-plus icon-plus"></i>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-content">
+                                                <div class="accordion-body">
+                                                    <p>Доставка заказов осуществляется домой, в офис, а также в пункты выдачи заказов.</p>
+                                                    <p>Срок доставки уточняйте у менеджеров Интернет-магазина</p>
+                                                    <em>Оплата:</em>
+                                                    <ul>
+                                                        <li>онлайн</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="show-mobile">
+            <div class="product-mobile">
+                <div class="accordion-item product-accordion-item">
+                    <div class="accordion-head">
+                        <div>
+                            <h2 class="accordion-title">ОПИСАНИЕ</h2>
+                        </div>
+                        <div>
+                            <i class="accordion-plus icon-plus"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>
+                                Содержание складня посвящено Пресвятой Богородице и повторяет иконографию известных русских икон XVI в. – «Похвала Богоматери» с Акафистом и сам текст Акафиста. Иконография «Похвалы» сложилась в византийском искусстве к XIV в. в период активной разработки новых Богородичных тем. Одним из ее литературных источников могла быть литургическая песнь из канона Святого Германа Царьградского (VIII в.) «Свыше пророцы тя предвозвестиша…». Часто на иконах композиция «Похвалы Богоматери» обрамлялась клеймами, иллюстрирующими текст посвященного Ей Акафиста, созданного предположительно Романом Сладкопевцем в VI в.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item product-accordion-item">
+                    <div class="accordion-head">
+                        <div>
+                            <h2 class="accordion-title">ХАРАКТЕРИСТИКИ</h2>
+                        </div>
+                        <div>
+                            <i class="accordion-plus icon-plus"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <div class="product-detail-props">
+                                <div class="product-detail-props-item">
+                                    <span>Металл</span>
+                                    
+                                    <span>Серебро</span>
+                                </div>
+                                <div class="product-detail-props-item">
+                                    <span>Покрытие</span>
+                                    
+                                    <span>Позолота, чернение</span>
+                                </div>
+                                <div class="product-detail-props-item">
+                                    <span>Размер</span>
+                                    
+                                    <span>51 * 33 мм</span>
+                                </div>
+                                <div class="product-detail-props-item">
+                                    <span>Толщина</span>
+                                    
+                                    <span>8,8 мм</span>
+                                </div>
+                                <div class="product-detail-props-item">
+                                    <span>Вес</span>
+                                    
+                                    <span>27,2 гр</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item product-accordion-item">
+                    <div class="accordion-head">
+                        <div>
+                            <h2 class="accordion-title">ДОСТАВКА И ОПЛАТА</h2>
+                        </div>
+                        <div>
+                            <i class="accordion-plus icon-plus"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <div class="accordion-item product-accordion-item">
+                                <div class="accordion-head">
+                                    <div>
+                                        <h2 class="accordion-title">доставка курьером по Москве в пределах МКАД</h2>
+                                    </div>
+                                    <div>
+                                        <i class="accordion-plus icon-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Бесплатно при сумме выкупа: Москва от 4 000 р. <br>
+                                            При меньшей сумме выкупа 300р.
+                                        </p>
+                                        
+                                        <em>Оплата:</em>
+                                        <ul>
+                                            <li>онлайн</li>
+                                            <li>картой или наличными при получении</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item product-accordion-item">
+                                <div class="accordion-head">
+                                    <div>
+                                        <h2 class="accordion-title">доставка курьером по Москве (за пределами МКАД) и МО</h2>
+                                    </div>
+                                    <div>
+                                        <i class="accordion-plus icon-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Бесплатно при сумме выкупа: Москва от 5 000 р. <br>
+                                            При меньшей сумме выкупа 350р.
+                                        </p>
+                                        <em>Оплата:</em>
+                                        <ul>
+                                            <li>онлайн</li>
+                                            <li>картой или наличными при получении</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item product-accordion-item">
+                                <div class="accordion-head">
+                                    <div>
+                                        <h2 class="accordion-title">Самовывоз</h2>
+                                    </div>
+                                    <div>
+                                        <i class="accordion-plus icon-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-body">
+                                        <em>Склад:</em>
+                                        <p>МО, г. Бронницы, Комсомольский пер., 53 </p>
+                                        <em>Шоурум:</em>
+                                        <p>г. Москва, Партийный пер. , д. 1, к. 46, офис 527 </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item product-accordion-item">
+                                <div class="accordion-head">
+                                    <div>
+                                        <h2 class="accordion-title">Доставка курьерскими службами по россии </h2>
+                                    </div>
+                                    <div>
+                                        <i class="accordion-plus icon-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-body">
+                                        <p>Доставка заказов осуществляется домой, в офис, а также в пункты выдачи заказов.</p>
+                                        <p>Срок доставки уточняйте у менеджеров Интернет-магазина</p>
+                                        <em>Оплата:</em>
+                                        <ul>
+                                            <li>онлайн</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -431,6 +644,7 @@
     <script src="assets/libs/jquery.min.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/libs/script.js"></script>
 </body>
 </html>

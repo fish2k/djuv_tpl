@@ -34,7 +34,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-6 col-md-4 col-4 footer-col-show">
+            <div class="col-xl-6 col-md-6 col-4 footer-col-show">
                 <div class="footer-col-flex">
                     <div class="footer-col-content">
                         <a href="catalog.html" class="footer-link">Церковный дом</a>
@@ -119,7 +119,6 @@
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
 
@@ -345,30 +344,26 @@
 
         const accordion = $(".accordion-item");
 
-        accordion.on("click", function() {
-            accordion.removeClass("active");
-            $(this).addClass("active");
+        accordion.on("click", function(e) {
+            // accordion.removeClass("active");
+            $(this).toggleClass("active");
 
-            checkActiveAccordion();
+            $(this).children().eq(1).eq(0).stop().slideToggle(250);
         });
 
-        const checkActiveAccordion = () => {
-            accordion.each(function() {
-                if ($(this).hasClass("active")) {
-                    accordion.find(".accordion-content").stop().slideUp(250);
-                    $(this).find(".accordion-content").stop().slideDown(250);
-                }
-            });
-        }
+        // const checkActiveAccordion = () => {
+        //     accordion.each(function(e) {
+        //         if ($(this).hasClass("active")) {
+        //             // accordion.find(".accordion-content").stop().slideUp(250);
+        //             $(this).find(".accordion-content").stop().slideDown(250);
+        //         } else {
+        //             $(this).find(".accordion-content").stop().slideUp(250);
+        //         }
+        //     });
+        // }
+
+        // checkActiveAccordion();
 
         $(".accordion-content").on("click", e => e.stopPropagation());
-
-        $(".accordion-plus").on("click", function(e) {
-            e.stopPropagation();
-            $(this).parent().parent().parent()
-                .removeClass("active").find(".accordion-content").stop().slideUp();
-        })
-
-        checkActiveAccordion();
     });
 </script>
