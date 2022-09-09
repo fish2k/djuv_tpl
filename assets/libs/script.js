@@ -136,10 +136,6 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $(".header-burger-inner").on("click", function() {
-        
-    });
-
     $(".about-body-back").on("click", function(e){
         e.preventDefault();
         $(".about-side").css("display", "flex");

@@ -178,6 +178,84 @@
             <i class="icon-bag"></i>
         </a>
     </div>
+
+    <div class="mobile-drop">
+        <div class="mobile-drop-inner">
+            <div class="mobile-drop-head">
+                <div class="mobile-drop-head-close">
+                    <div class="icon-close"></div>
+                </div>
+                <div class="mobile-drop-search">
+                    <form action="">
+                        <div class="input-field">
+                            <input type="text" class="input-field-element" placeholder="Название, артикул">
+                            <div class="input-field-label">
+                                <span>Название, артикул</span>
+                            </div>
+                            <div class="input-icon icon-search"></div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="mobile-drop-navs">
+                    <div class="mobile-drop-title">
+                        <h3>Каталог</h3>
+                    </div>
+
+                    <div class="header-drop-nav mobile-header-drop-nav">
+                        <div class="header-nav-type">
+                            <span>Церковный магазин</span> <i class="icon-plus"></i>
+                        </div>
+                        <ul class="header-nav-list">
+                            <li class="header-nav-li"><a class="header-nav-href">цепи</a></li>
+                            <li class="header-nav-li"><a class="header-nav-href">кольца и перстни</a></li>
+                            <li class="header-nav-li"><a class="header-nav-href">крестики</a></li>
+                            <li class="header-nav-li"><a class="header-nav-href">образки</a></li>
+                            <li class="header-nav-li"><a class="header-nav-href">подвески</a></li>
+                            <li class="header-nav-li"><a class="header-nav-href">серьги</a></li>
+                            <li class="header-nav-li"><a class="header-nav-href">браслеты</a></li>
+                            <li class="header-nav-li"><a class="header-nav-href">иконы</a></li>
+                            <li class="header-nav-li"><a class="header-nav-href">Православные подарки</a></li>
+                            <li class="header-nav-li"><a class="header-nav-href">Смотреть всё</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-drop-nav mobile-header-drop-nav">
+                        <div class="header-nav-type">
+                            <span>церковный дом</span> <i class="icon-plus"></i>
+                        </div>
+                        <ul class="header-nav-list">
+                            <li class="header-nav-li"><a class="header-nav-href">Категория</a></li>
+                            <li class="header-nav-li"><a class="header-nav-href">Категория</a></li>
+                            <li class="header-nav-li"><a class="header-nav-href">Категория</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-drop-nav mobile-header-drop-nav">
+                        <a href="catalog.html" class="header-nav-type">
+                            <span>Смотреть всё</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mobile-drop-navs">
+                    <div class="header-drop-nav mobile-header-drop-nav">
+                        <a href="about-us.html" class="header-nav-type">
+                            <span>наше ремесло</span>
+                        </a>
+                    </div>
+                    <div class="header-drop-nav mobile-header-drop-nav">
+                        <a href="news.html" class="header-nav-type">
+                            <span>новости</span>
+                        </a>
+                    </div>
+                    <div class="header-drop-nav mobile-header-drop-nav">
+                        <a href="contacts.html" class="header-nav-type">
+                            <span>контакты</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <ul class="header-menu">
         <li class="header-menu-item">
@@ -206,6 +284,16 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
+        $(".header-burger-inner").on("click", function() {
+            $("body").addClass("on-menu");
+            $(".mobile-drop").stop().slideDown(250);
+        });
+
+        $(".mobile-drop-head-close").on("click", function() {
+            $("body").removeClass("on-menu");
+            $(".mobile-drop").stop().slideUp(250);
+        })
+        
         // эти две переменные для демонстрации, при интеграции меню нужен будет только массив меню
         const menuObject = [];
         const menuBitrixJSON = {
