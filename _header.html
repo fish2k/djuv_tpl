@@ -7,13 +7,13 @@
                         <a href="#" class="header-nav-link">Каталог <i class="icon-plus"></i></a>
                     </div>
                     <div class="header-nav-item">
-                        <a href="#" class="header-nav-link">наше ремесло</a>
+                        <a href="about-us.html" class="header-nav-link">наше ремесло</a>
                     </div>
                     <div class="header-nav-item">
-                        <a href="#" class="header-nav-link">новости</a>
+                        <a href="news.html" class="header-nav-link">новости</a>
                     </div>
                     <div class="header-nav-item">
-                        <a href="#" class="header-nav-link">Контакты</a>
+                        <a href="contacts.html" class="header-nav-link">Контакты</a>
                     </div>
                 </div>
             </div>
@@ -24,13 +24,79 @@
             </div>
             <div class="col-xl-4 col-lg-4 col-4 header-flex-item header-item-right">
                 <div class="header-btns">
-                    <a href="#" class="header-btn"><i class="icon-heart"></i></a>
-                    <a href="#" class="header-btn"><i class="icon-search"></i></a>
+                    <a href="cabinet-user.html" class="header-btn"><i class="icon-heart"></i></a>
+                    <a href="#" class="header-btn open-search"><i class="icon-search"></i></a>
                     <a href="cart.html" class="header-btn header-cart header-cart-has-items">
                         <i class="icon-bag"></i>
                         <span class="header-cart-counter" data-cart-items-count="3"></span>
                     </a>
                     <a href="#" class="header-btn action-auth"><i class="icon-user-filled"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-search">
+        <div class="header-search-inner">
+            <div class="header-search-top">
+                <div class="icon-close close-search"></div>
+            </div>
+            <form action="" class="header-search-form">
+                <div class="input-field">
+                    <input type="text" name="header-search-input" class="input-field-element input-small" placeholder="Название, артикул">
+                    <div class="input-field-label">
+                        <span>Название, артикул</span>
+                    </div>
+                    <div class="input-icon icon-search"></div>
+                </div>
+            </form>
+            <div class="search-results">
+                <div class="search-results-list">
+                    <div class="search-results-item">
+                        <a href="" class="search-results-link">
+                            <span>Кольцо</span>. Орнамент, заплетённый из рыб и гроздьев винограда...
+                        </a>
+                    </div>
+                    <div class="search-results-item">
+                        <a href="" class="search-results-link">
+                            Обручальное <span>кольцо</span> из желтого золота
+                        </a>
+                    </div>
+                    <div class="search-results-item">
+                        <a href="" class="search-results-link">
+                            <span>Кольцо</span> обручальное из красного золота с бриллиантом
+                        </a>
+                    </div>
+                    <div class="search-results-item">
+                        <a href="" class="search-results-link">
+                            Обручальное <span>кольцо</span> гладкое из золота
+                        </a>
+                    </div>
+                    <div class="search-results-item">
+                        <a href="" class="search-results-link">
+                            Обручальное <span>кольцо</span> из белого золота
+                        </a>
+                    </div>
+                    <div class="search-results-item">
+                        <a href="" class="search-results-link">
+                            <span>Кольцо</span> обручальное из красного золота
+                        </a>
+                    </div>
+                    <div class="search-results-item">
+                        <a href="" class="search-results-link">
+                            <span>Кольцо</span> без вставок обручальное гладкое
+                        </a>
+                    </div>
+                    <div class="search-results-item">
+                        <a href="" class="search-results-link">
+                            <span>Кольцо</span> без вставок обручальное гладкое
+                        </a>
+                    </div>
+                    <div class="search-results-item">
+                        <a href="" class="search-results-link">
+                            <span>Кольцо</span> без вставок обручальное гладкое
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -259,8 +325,8 @@
     
     <ul class="header-menu">
         <li class="header-menu-item">
-            <a href="" class="header-menu-link">
-                <i class="icon-search"></i>
+            <a href="index.html" class="header-menu-link">
+                <i class="icon-home"></i>
             </a>
         </li>
         <li class="header-menu-item">
@@ -275,7 +341,7 @@
             </a>
         </li>
         <li class="header-menu-item">
-            <a href="" class="header-menu-link header-menu-auth">
+            <a class="header-menu-link header-menu-auth action-auth">
                 <i class="icon-user-filled"></i>
             </a>
         </li>
@@ -284,6 +350,14 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
+        $(".open-search, .close-search").on("click", function() {
+            $(".header-search-inner").stop().slideToggle();
+        });
+
+        $("input[name='header-search-input']").on("keyup", function() {
+            $(this).val().length !== 0 ? $(".search-results").stop().slideDown() : $(".search-results").stop().slideUp();
+        })
+
         $(".header-burger-inner").on("click", function() {
             $("body").addClass("on-menu");
             $(".mobile-drop").stop().slideDown(250);
@@ -292,22 +366,7 @@
         $(".mobile-drop-head-close").on("click", function() {
             $("body").removeClass("on-menu");
             $(".mobile-drop").stop().slideUp(250);
-        })
-        
-        // эти две переменные для демонстрации, при интеграции меню нужен будет только массив меню
-        const menuObject = [];
-        const menuBitrixJSON = {
-            "sub": {
-                "0": {
-                    "name": "",
-                    "link": "",
-                    "sub": "",
-                }
-            }
-        }
-
-        // не пушить массив в объект! это только для демонстрации. Битра отдаёт объект массивов
-        menuObject.push(menuBitrixJSON);
+        });
 
         // инициализация слайдера в шапке
         const initHeaderSlider = function() {

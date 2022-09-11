@@ -7,10 +7,13 @@
 
     <title>Document</title>
 
+    <link rel="stylesheet" href="assets/libs/ion-range-slider/css/ion.rangeSlider.min.css">
     <link rel="stylesheet" href="assets/fonts/danilov-icons/style.css">
     <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
+
+    <script src="assets/libs/jquery.min.js"></script>
 </head>
 <body>
 
@@ -53,7 +56,265 @@
                     </div>
                 </div>
                 <div class="catalog-smart-filter">
-                    #BITRIX_SMARTFILTER
+                    <div class="filter-row">
+                        <div class="filter-head">Категория</div>
+                        <div class="filter-content">
+                            <label class="checkbox mb-2">
+                                <div class="checkbox-input">
+                                    <input type="checkbox" class="input-check" >
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    Дарохранительницы
+                                </div>
+                            </label>
+                            <label class="checkbox mb-2">
+                                <div class="checkbox-input">
+                                    <input type="checkbox" class="input-check" >
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    ковчеги
+                                </div>
+                            </label>
+                            <label class="checkbox mb-2">
+                                <div class="checkbox-input">
+                                    <input type="checkbox" class="input-check" >
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    Раки
+                                </div>
+                            </label>
+                            <label class="checkbox mb-2">
+                                <div class="checkbox-input">
+                                    <input type="checkbox" class="input-check" checked>
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    жезлы
+                                </div>
+                            </label>
+                            <label class="checkbox mb-2">
+                                <div class="checkbox-input">
+                                    <input type="checkbox" class="input-check" checked>
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    Кадила
+                                </div>
+                            </label>
+                            <label class="checkbox mb-2">
+                                <div class="checkbox-input">
+                                    <input type="checkbox" class="input-check" >
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    Хоргугви
+                                </div>
+                            </label>
+                            <label class="checkbox mb-2">
+                                <div class="checkbox-input">
+                                    <input type="checkbox" class="input-check" >
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    Алтарные перегородки
+                                </div>
+                            </label>
+                            <label class="checkbox mb-2">
+                                <div class="checkbox-input">
+                                    <input type="checkbox" class="input-check" >
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    Престолы
+                                </div>
+                            </label>
+                            <label class="checkbox mb-2">
+                                <div class="checkbox-input">
+                                    <input type="checkbox" class="input-check" >
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    Евхаристические наборы
+                                </div>
+                            </label>
+                            <label class="checkbox mb-2">
+                                <div class="checkbox-input">
+                                    <input type="checkbox" class="input-check" checked>
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    дискосы
+                                </div>
+                            </label>
+                            <label class="checkbox mb-2">
+                                <div class="checkbox-input">
+                                    <input type="checkbox" class="input-check" checked>
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    семисвечники
+                                </div>
+                            </label>
+                            <label class="checkbox mb-2">
+                                <div class="checkbox-input">
+                                    <input type="checkbox" class="input-check" checked>
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    Хоросы
+                                </div>
+                            </label>
+                            <label class="checkbox mb-2">
+                                <div class="checkbox-input">
+                                    <input type="checkbox" class="input-check" checked>
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    тРИКИРИИ
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <div class="filter-head">стоимость</div>
+                        <div class="filter-content">
+
+                            <div class="filter-range">
+                                <div class="filter-range-item">
+                                    <input type="text" class="filter-range-input range-min" value="0">
+                                </div>
+                                <div class="filter-range-item">
+                                    <input type="text" class="filter-range-input range-max" value="0">
+                                </div>
+                            </div>
+
+                            <input type="text" class="js-range-slider" name="price_range" value=""
+                                   data-hide-from-to="true"
+                                   data-hide-min-max="true"
+                                   data-skin="round"
+                                   data-type="double"
+                                   data-min="200"
+                                   data-max="2000000"
+                                   data-from="400000"
+                                   data-to="2000000"
+                                   data-grid="false">
+
+
+                            <script>
+                                $(function () {
+                                    var $range = $(".js-range-slider");
+                                    var $inputFrom = $(".range-min");
+                                    var $inputTo = $(".range-max");
+                                    var instance;
+                                    var min = 43;
+                                    var max = 8541;
+                                    var from = 43;
+                                    var to = 8541;
+
+                                    $range.ionRangeSlider({
+                                        hide_from_to: true,
+                                        hide_min_max: true,
+                                        onStart: updateInputs,
+                                        onChange: updateInputs,
+                                        onFinish: updateInputs
+                                    });
+
+                                    instance = $range.data("ionRangeSlider");
+
+                                    function updateInputs(data) {
+                                        from = data.from;
+                                        to = data.to;
+
+                                        $inputFrom.prop("value", from);
+                                        $inputTo.prop("value", to);
+                                    }
+
+                                    $inputFrom.on("change", function () {
+                                        var val = $(this).prop("value");
+                                        if (val < min) {
+                                            val = min;
+                                        } else if (val > to) {
+                                            val = to;
+                                        }
+                                        instance.update({
+                                            from: val
+                                        });
+                                        $(this).prop("value", val);
+                                    });
+
+                                    $inputTo.on("change", function () {
+                                        var val = $(this).prop("value");
+                                        if (val < from) {
+                                            val = from;
+                                        } else if (val > max) {
+                                            val = max;
+                                        }
+                                        instance.update({
+                                            to: val
+                                        });
+                                        $(this).prop("value", val);
+                                    });
+
+                                    /*$(".js-range-slider").ionRangeSlider({
+                                        onStart: function (data) {
+                                            $(".range-min").val(data.from);
+                                            $(".range-max").val(data.to);
+                                        },
+                                        onChange: function (data) {
+                                            $(".range-min").val(data.from);
+                                            $(".range-max").val(data.to);
+                                        }
+                                    });*/
+                                })
+
+                            </script>
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <div class="filter-head">Материал</div>
+                        <div class="filter-content">
+                            <label class="checkbox mb-2">
+                                <div class="checkbox-input">
+                                    <input type="checkbox" class="input-check" checked>
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    Свойство
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <div class="filter-head">покрытие</div>
+                        <div class="filter-content">
+                            <label class="checkbox mb-2">
+                                <div class="checkbox-input">
+                                    <input type="checkbox" class="input-check" checked>
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    Свойство
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <div class="filter-head">камни</div>
+                        <div class="filter-content">
+                            <label class="checkbox mb-2">
+                                <div class="checkbox-input">
+                                    <input type="checkbox" class="input-check" checked>
+                                    <div class="input-check-state"></div>
+                                </div>
+                                <div class="checkbox-label">
+                                    Свойство
+                                </div>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="catalog-main">
@@ -66,7 +327,7 @@
                 </div>
                 <div class="catalog-list">
                     <div class="row g-0">
-                        <div class="col-md-4 col-sm-6 col-12 col-catalog-product">
+                        <div class="col-md-4 col-6 col-catalog-product">
                             <a href="product.html" class="product-card">
                                 <div class="product-card-inner">
                                     <div class="product-card-nav"></div>
@@ -95,7 +356,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-12 col-catalog-product">
+                        <div class="col-md-4 col-6 col-catalog-product">
                             <a href="product.html" class="product-card">
                                 <div class="product-card-inner">
                                     <div class="product-card-nav"></div>
@@ -124,7 +385,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-12 col-catalog-product">
+                        <div class="col-md-4 col-6 col-catalog-product">
                             <a href="product.html" class="product-card">
                                 <div class="product-card-inner">
                                     <div class="product-card-nav"></div>
@@ -153,7 +414,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-12 col-catalog-product">
+                        <div class="col-md-4 col-6 col-catalog-product">
                             <a href="product.html" class="product-card">
                                 <div class="product-card-inner">
                                     <div class="product-card-nav"></div>
@@ -182,7 +443,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-12 col-catalog-product">
+                        <div class="col-md-4 col-6 col-catalog-product">
                             <a href="product.html" class="product-card">
                                 <div class="product-card-inner">
                                     <div class="product-card-nav"></div>
@@ -211,7 +472,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-12 col-catalog-product">
+                        <div class="col-md-4 col-6 col-catalog-product">
                             <a href="product.html" class="product-card">
                                 <div class="product-card-inner">
                                     <div class="product-card-nav"></div>
@@ -240,7 +501,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-12 col-catalog-product">
+                        <div class="col-md-4 col-6 col-catalog-product">
                             <a href="product.html" class="product-card">
                                 <div class="product-card-inner">
                                     <div class="product-card-nav"></div>
@@ -269,7 +530,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-12 col-catalog-product">
+                        <div class="col-md-4 col-6 col-catalog-product">
                             <a href="product.html" class="product-card">
                                 <div class="product-card-inner">
                                     <div class="product-card-nav"></div>
@@ -298,7 +559,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-12 col-catalog-product">
+                        <div class="col-md-4 col-6 col-catalog-product">
                             <a href="product.html" class="product-card">
                                 <div class="product-card-inner">
                                     <div class="product-card-nav"></div>
@@ -348,9 +609,10 @@
     <!-- footer -->
     <div id="footer"></div>
 
-    <script src="assets/libs/jquery.min.js"></script>
+    
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/libs/ion-range-slider/js/ion.rangeSlider.min.js"></script>
     <script src="assets/libs/script.js"></script>
 </body>
 </html>

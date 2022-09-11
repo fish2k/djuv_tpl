@@ -5,36 +5,19 @@
 
     <div class="container">
         <div class="row g-0 row-footer-head">
-            <div class="col-xl-6 col-md-6 col-4">
+            <div class="col-4">
                 <div class="footer-col-head heading-2">Каталог</div>
             </div>
-            <div class="col-xl-3 col-md-3 col-4">
+            <div class="col-4">
                 <div class="footer-col-head heading-2">О бренде</div>
             </div>
-            <div class="col-xl-3 col-md-3 col-4">
+            <div class="col-4">
                 <div class="footer-col-head heading-2">Контакты</div>
             </div>
         </div>
 
         <div class="row g-0 row-footer">
-            <div class="col-xl-6 col-md-6 col-4 footer-col-hide">
-                <div class="footer-col-flex">
-                    <div class="footer-col-content">
-                        <a href="" class="footer-link">Цепи</a>
-                        <a href="" class="footer-link">Кольца и перстни</a>
-                        <a href="" class="footer-link">Крестики</a>
-                        <a href="" class="footer-link">Образки</a>
-                        <a href="" class="footer-link">Подвески</a>
-                    </div>
-                    <div class="footer-col-content">
-                        <a href="" class="footer-link">Церковная ювелирная линия</a>
-                        <a href="" class="footer-link">Атрибуты церковного убранства</a>
-                        <a href="" class="footer-link">Мастера-ремесленники по оснащению храмов</a>
-                        <a href="" class="footer-link">Ладан</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6 col-md-6 col-4 footer-col-show">
+            <div class="col-4">
                 <div class="footer-col-flex">
                     <div class="footer-col-content">
                         <a href="catalog.html" class="footer-link">Церковный дом</a>
@@ -42,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-3 col-4">
+            <div class="col-4">
                 <div class="footer-col-content">
                     <a href="" class="footer-link">Наше ремесло</a>
                     <a href="" class="footer-link">Новости</a>
@@ -50,7 +33,7 @@
                     <a href="" class="footer-link">Политика обработки персональных данных</a>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-3 col-4">
+            <div class="col-4">
                 <div class="footer-col-content">
                     <a href="" class="footer-link">+ 7 495 796-24-61</a>
                     <a href="" class="footer-link">info@dangold.ru</a>
@@ -138,7 +121,7 @@
     </div>
 </div>
 
-<!-- auth modal -->
+<!-- Auth modal -->
 <div class="modal fade modal-auth" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -350,19 +333,6 @@
 
             $(this).children().eq(1).eq(0).stop().slideToggle(250);
         });
-
-        // const checkActiveAccordion = () => {
-        //     accordion.each(function(e) {
-        //         if ($(this).hasClass("active")) {
-        //             // accordion.find(".accordion-content").stop().slideUp(250);
-        //             $(this).find(".accordion-content").stop().slideDown(250);
-        //         } else {
-        //             $(this).find(".accordion-content").stop().slideUp(250);
-        //         }
-        //     });
-        // }
-
-        // checkActiveAccordion();
 
         $(".accordion-content").on("click", e => e.stopPropagation());
     });
