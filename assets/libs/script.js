@@ -147,4 +147,28 @@ $(document).ready(function() {
         $(".news-side").css("display", "flex");
         $(".about-body").hide();
     });
+
+    $(".open-filter").on("click", function() {
+        $(this).siblings().eq(0).stop().toggle()
+    });
+
+    $(".filter-selected").on("click", e => e.preventDefault())
+
+    $(".filter-selected-remove").on("click", function() {
+        $(this).parent().remove();
+
+        if ($(".filters-user-inner").children().length === 0) {
+            $(".filters-user-inner").text("Ничего не выбрано")
+        }
+    });
+
+    $(".open-sort").on("click", function() {
+        $(".filter-sort").toggle();
+    });
+
+    $(".filter-sort-type").on("click", function() {
+        $(".open-sort span").text($(this).text());
+
+        $(".filter-sort").hide();
+    })
 });

@@ -47,12 +47,40 @@
         <div class="catalog-flex">
             <div class="catalog-sider">
                 <div class="catalog-sider-head">
-                    <div class="catalog-btn sider-head-filter">
-                        <i class="icon-filter"></i>
-                        <span>
-                            5 фильтров
-                        </span>
-                        <i class="icon-plus"></i>
+                    <div class="catalog-btn open-filter">
+                        <div class="sider-head-filter">
+                            <i class="icon-filter"></i>
+                            <span>
+                                5 фильтров
+                            </span>
+                            <i class="icon-plus"></i>
+                        </div>
+                        <a href="#" class="filters-clear"></a>
+                    </div>
+
+                    <div class="filters-user">
+                        <div class="filters-user-inner">
+                            <div class="filter-selected">
+                                <span>ковчеги</span>
+                                <div class="icon-close filter-selected-remove"></div>
+                            </div>
+                            <div class="filter-selected">
+                                <span>раки</span>
+                                <div class="icon-close filter-selected-remove"></div>
+                            </div>
+                            <div class="filter-selected">
+                                <span>жезлы</span>
+                                <div class="icon-close filter-selected-remove"></div>
+                            </div>
+                            <div class="filter-selected">
+                                <span>семисвечники</span>
+                                <div class="icon-close filter-selected-remove"></div>
+                            </div>
+                            <div class="filter-selected">
+                                <span>Евхаристические наборы</span>
+                                <div class="icon-close filter-selected-remove"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="catalog-smart-filter">
@@ -320,9 +348,28 @@
             <div class="catalog-main">
                 <div class="catalog-main-head">
                     <span class="catalog-count-total">100 500 изделий</span>
-                    <div class="catalog-btn sider-head-filter">
-                        <span>Сортировать по</span>
-                        <i class="icon-plus"></i>
+                    <div style="position: relative">
+                        <div class="catalog-btn sider-head-filter open-sort">
+                            <span>Сортировать по</span>
+                            <i class="icon-plus"></i>
+                        </div>
+
+                        <div class="filter-sort">
+                            <div class="filter-sort-inner">
+                                <div class="filter-sort-type">
+                                    по убыванию цены
+                                </div>
+                                <div class="filter-sort-type">
+                                    По возрастанию цены
+                                </div>
+                                <div class="filter-sort-type">
+                                    популярное
+                                </div>
+                                <div class="filter-sort-type">
+                                    новинки
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="catalog-list">

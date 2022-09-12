@@ -1132,10 +1132,14 @@ img, svg {
 }
 
 .catalog-btn {
-    padding: 20px 0;
+    padding: 20px 15px;
     cursor: pointer;
     text-transform: uppercase;
     font-size: 14px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .sider-head-filter {
@@ -3158,6 +3162,76 @@ em {
     opacity: 0.5;
 }
 
+.catalog-sider-head {
+    position: relative;
+}
+
+.filters-user {
+    display: none;
+}
+
+.filters-user-inner {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    padding: 0 15px 15px;
+    background-color: var(--accent);
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    z-index: 3;
+
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.filter-selected {
+    display: flex;
+    align-items: center;
+    grid-column-gap: 10px;
+    border: 1px solid var(--brown);
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.filter-selected-remove {
+    cursor: pointer;
+}
+
+.filter-sort {
+    display: none;
+}
+
+.filter-sort-inner {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 3;
+    width: 228px;
+    background-color: var(--accent);
+}
+
+.filter-sort-type {
+    padding: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: right;
+    cursor: pointer;
+}
+
+.filter-sort-type:hover {
+    background-color: var(--brown);
+    color: #fff;
+}
+
 /* media */
 @media (max-width: 1800px) {
     .header-nav-link {
@@ -3263,6 +3337,11 @@ em {
 }
 
 @media (max-width: 1120px) {
+    .catalog-main-head {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
     .catalog-sider,
     .catalog-main {
         flex: 0 0 100%;
@@ -3278,6 +3357,7 @@ em {
 }
 
 @media (max-width: 1024px) {
+
     #user_edit_form {
         max-width: 100%;
     }
@@ -3346,6 +3426,12 @@ em {
 }
 
 @media (max-width: 768px) {
+    .sider-head-filter {
+        font-size: 12px;
+        padding: 10px 0 10px 10px;
+        font-weight: 500;
+    }
+
     .product-slider-main,
     .product-slider-thumbnails {
         width: 100%;
